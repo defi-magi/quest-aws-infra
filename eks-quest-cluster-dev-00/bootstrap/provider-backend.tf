@@ -18,11 +18,10 @@ provider "aws" {
 data "terraform_remote_state" "cluster_core" {
   backend = "s3"
   config = {
-    role_arn   = "arn:aws:iam::142540212645:role/811075206237-terraform-state-access"
-    bucket     = "shinra-terraform-remote-state"
-    key        = "811075206237/security-tooling/dev/kubernetes/cluster-00/terraform.tfstate"
-    kms_key_id = "arn:aws:kms:us-west-2:142540212645:alias/shinra-terraform-remote-state-backend-811075206237"
-    region     = "us-west-2"
+    bucket     = "quest-terraform-remote-state"
+    key        = "quest-infra/eks/quest/dev/00/terraform.tfstate"
+    region     = "us-east-1"
+    kms_key_id = "fd69cf79-218c-4a9e-8c56-90a25802ffa3"
   }
 }
 
