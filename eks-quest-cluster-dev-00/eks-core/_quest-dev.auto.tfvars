@@ -1,6 +1,3 @@
-#---------------------------------------------------------------------------------------------------
-# Example variables file, please review each of these variables and update as necessary
-#---------------------------------------------------------------------------------------------------
 common_tags = {
   application-id = "eks"
   project        = "quest"
@@ -17,9 +14,8 @@ vpc_id = "vpc-0c403d747908e6cbe"
 
 subnet_ids = ["subnet-027ccc0d813b9ad3d", "subnet-0b7827abab434bdf7", "subnet-00fa409103d42fa44"]
 
-control_plane_api_allow_list_cidrs = []
+control_plane_api_allow_list_cidrs = null
 
-# Default instance types
 instance_types = ["t3.medium"]
 
 cluster_log_types = ["api", "audit", "authenticator", "controllerManager", "scheduler"]
@@ -53,17 +49,17 @@ managed_node_groups = {
     desired_size            = 3
     max_size                = 5
     min_size                = 3
-    instance_types          = ["t3.medium"]
+    instance_types          = ["t3.large"]
     capacity_type           = "ON_DEMAND"
     ebs_optimized           = false
     disable_api_termination = false
     create_iam_role         = true
     iam_role_name           = null
-    iam_role_description    = null # this is a string
+    iam_role_description    = null
     iam_role_tags = {
       Purpose = "General Purpose Compute node group IAM role"
     }
-    iam_role_additional_policies = [] # i.e. "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
+    iam_role_additional_policies = []
     labels = {
       NodeGroupPurpose = "GeneralPurposeCompute"
       IsSpotNode       = "false"
@@ -83,7 +79,7 @@ managed_node_groups = {
       "http_tokens" : "required"
     }
     create_security_group      = true
-    security_group_description = null # this is a string
+    security_group_description = "Security Group created with GPC nodes"
     security_group_rules = {
       # phoneOut = {
       #   description = "Hello CloudFlare"

@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket         = "quest-terraform-remote-state"
-    key            = "quest-infra/eks/quest/dev/00/bootstrap/terraform.tfstate"
+    key            = "quest-infra/eks/quest/dev/00/boot/terraform.tfstate"
     region         = "us-east-1"
     encrypt        = true
     kms_key_id     = "fd69cf79-218c-4a9e-8c56-90a25802ffa3"
