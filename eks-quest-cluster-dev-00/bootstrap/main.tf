@@ -1,5 +1,5 @@
 module "argocd_bootstrap" {
-  source                            = "git::git@github.com:defi-magi/quest-eks-modules.git//core-bootstrap"
+  source                            = "git::git@github.com:defi-magi/quest-eks-modules.git//core-bootstrap?ref=v1.0.0"
   common_tags                       = var.common_tags
   tags                              = var.tags
   eks_oidc_provider_arn             = data.terraform_remote_state.cluster_core.outputs.eks_cluster_full_outputs.oidc_provider_arn

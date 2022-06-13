@@ -1,7 +1,7 @@
 # Quest AWS Infra
 This repository contains the Terraform code that's used to provision infrastructure that hosts the Quest node application.
 
-![Terraform Kubernetes](./static/terraform-kubernetes.png)
+![Terraform Kubernetes](./static/aws-k8s-tf.jpeg)
 
 ```
 ├── eks-quest-cluster-dev-00

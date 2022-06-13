@@ -1,5 +1,5 @@
 module "eks_00" {
-  source                             = "git::git@github.com:defi-magi/quest-eks-modules.git//eks-core"
+  source                             = "git::git@github.com:defi-magi/quest-eks-modules.git//eks-core?ref=v1.0.0"
   common_tags                        = var.common_tags
   tags                               = var.tags
   k8s_version                        = var.k8s_version
